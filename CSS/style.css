@@ -1,0 +1,115 @@
+*{
+	margin: 0;
+	padding: 0;
+	/*transition: all 3s;*/
+}
+section{
+	width: 100%;
+	height: 500px;
+}
+div{
+	width: 100px;
+	height: 100px;
+	box-sizing: border-box;
+}
+#One, #Two{
+	padding-top: 100px;
+	padding-left: 45%;
+}
+#One{
+	background-color: ghostwhite;
+}
+#Two{
+	background-color: aliceblue;
+}
+.block1{
+	background-color: lightgray;
+}
+.block2{
+	background-color: lightsteelblue;
+}
+.block3{
+	background-color: lightslategray;
+}
+.block4{
+	background-color: dimgray;
+}
+.block5{
+	background-color: lightskyblue;
+}
+.block6{
+	background-color: cornflowerblue;
+}
+.block7{
+	background-color: royalblue;
+}
+.block8{
+	background-color: midnightblue;
+}
+
+.block5:hover + .block6{
+	background-color: red !important; 
+}
+.block6:hover + .block7{
+	background-color: aliceblue !important;
+	border: transparent !important;
+	z-index: 10
+}
+
+#Two:hover .block5, #Two:hover .block7{
+	border: yellow solid 10px;
+	z-index: -10;
+}
+#Two:hover .block6 {
+	background-color: yellow;
+	z-index: -10;
+}
+#Two:hover .block8 {
+	background-color: yellow;
+}
+
+
+#Three{
+	background-color: lavenderblush;
+	position: relative;
+}
+#Three div{
+	position: absolute;
+	left: 45%;
+}
+#Three div:nth-child(1){
+	background-color: pink;
+	top: 50px;
+}
+#Three div:nth-child(2){
+	background-color: mediumvioletred;
+	top: 150px;
+}
+#Three div:nth-child(3){
+	background-color: darkviolet;
+	top: 250px;
+}
+#Three div:nth-child(4){
+	background-color: indigo;
+	top: 350px;
+}
+#Three:hover div:nth-child(1){
+	top: 250px;
+}
+#Three:hover div:nth-child(2){
+	top: 350px;
+}
+#Three:hover div:nth-child(3){
+	top: 50px;
+}
+#Three:hover div:nth-child(4){
+	top: 150px;
+}
+
+
+#Three div:first-child:hover ~ div:nth-child(2){
+	top: 50px !important;
+}
+#Three div:first-child:hover ~ div:nth-child(3){
+	top: 350px !important;
+}
